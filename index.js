@@ -6,6 +6,7 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/Users");
 const movieRoutes = require("./routes/Movies");
 const listRoutes = require("./routes/Lists");
+const PORT = process.env.PORT || 8800;
 var cors = require("cors");
 dotenv.config();
 mongoose
@@ -30,6 +31,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
+app.listen(PORT, () => {
   console.log("Backend server running");
 });
